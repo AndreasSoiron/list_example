@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checklist</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="height:100%;">
+  <div class="pull-left" style="width:30%; height:200px;"><%= image_tag "pony-l.png" %></div>
+  <div class="pull-left" style="width:40%; background-color:#fff;height:100%;box-shadow: 0px 0px 10px #4a4a4a;">
+    <div style="padding:15px;height:100%">
+      <%= yield %>
+    </div>
+  </div>
+  <div class="pull-right" style="width:30%; height:200px;text-align:right;"><%= image_tag "pony-r.png" %></div>
+  <div class="clear"></div>
+</body>
+</html>

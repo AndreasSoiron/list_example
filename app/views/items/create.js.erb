@@ -1,0 +1,7 @@
+$('#item_list').append('<li id="<%=@item.id%>"><%= j render 'item', item: @item %></li>');
+$('#new_item').remove();
+$('#new_item_button').show();
+$('#<%= @item.id %> .edit_item').find('input[type=submit]').remove();
+$('#<%= @item.id %> .edit_item').find('input[type=checkbox]').click(function() {
+  $(this).parent('form').submit();
+});

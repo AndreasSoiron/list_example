@@ -1,0 +1,15 @@
+<h1><%= image_tag "logo.png" %> Checklist</h1>
+
+<%= link_to "Create new Item", new_item_path, class: "btn", id: "new_item_button", remote: true %>
+
+<ul style="margin:20px 0 20px 0;" id="item_list">
+  <% @items.each do |item| %>
+    <li id="<%= item.id %>">
+      <%= render "item", item: item %>
+    </li>
+  <% end %>
+</ul>
+
+<br />
+
+

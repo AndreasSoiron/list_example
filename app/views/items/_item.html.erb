@@ -1,0 +1,9 @@
+<%= form_for(item, remote: true) do |f| %>
+  <%= f.check_box :done %>
+  <%= f.submit "Update", class: "btn btn-small" %>
+  <%= f.label :done, item.title %>
+  (
+  <%= link_to "edit", edit_item_path(item.id), remote: true%>,
+  <%= link_to "remove", item, method: :delete, remote: true, data: {confirm: "Are you sure?"}%>
+  )
+<% end %>

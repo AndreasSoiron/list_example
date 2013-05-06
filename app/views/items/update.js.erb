@@ -1,0 +1,5 @@
+$('#<%= @item.id %>').replaceWith('<li id="<%= @item.id %>"><%= j render "item", item: @item %></li>');
+$('#<%= @item.id %> .edit_item').find('input[type=submit]').remove();
+$('#<%= @item.id %> .edit_item').find('input[type=checkbox]').click(function() {
+  $(this).parent('form').submit();
+});
